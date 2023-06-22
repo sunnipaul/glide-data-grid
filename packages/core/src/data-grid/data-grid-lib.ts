@@ -419,7 +419,7 @@ export function drawTextCell(
 
     allowWrapping = allowWrapping ?? false;
 
-    if (!allowWrapping) {
+    if ( data && !allowWrapping) {
         if (data.includes("\n")) {
             // new lines are rare and split is relatively expensive compared to the search
             // it pays off to not do the split contantly.
